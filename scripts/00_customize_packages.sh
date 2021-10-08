@@ -14,7 +14,7 @@ cp -rf ../luci-app-adguardhome package/new/luci-app-adguardhome
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-arpbind package/new/luci-app-arpbind
 
 # AutoCore
-cp -rf ../autocore package/new/autocore
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/emortal/autocore package/new/autocore
 
 # automount
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/automount package/new/automount
