@@ -79,7 +79,7 @@ jobs:
     - name: Make Config
       working-directory: ./openwrt
       run: |
-        cp ../k2p_defconfig .config
+        cp ../k2p_defconfig1907 .config
         sed -i '/luci-app-mtwifi/d' .config
         make defconfig
 
