@@ -58,11 +58,13 @@ jobs:
       run: |
         cp ../scripts/02_create_acl_for_luci.sh .
         /bin/bash 02_create_acl_for_luci.sh -a
+        
     - name: Make Config
       working-directory: ./openwrt
       run: |
-        cp ../k2p_defconfig .config
+        cp ../k2p_defconfig1907 .config
         make defconfig
+        
     - name: Make Download
       working-directory: ./openwrt
       run: |
