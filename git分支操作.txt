@@ -1,0 +1,60 @@
+
+#查看所有分支
+git branch -a
+
+
+
+git clone -b v19.07.7 https://github.com/openwrt/openwrt openwrt1907
+
+
+
+#克隆分支至本地
+git clone -b v19.07.7-r21.133 https://github.com/xyz9836/OpenWrt-Autobuild openwrt1907
+
+
+管理远程分支
+If you wish to set tracking information for this branch you can do so with:
+
+git branch --set-upstream-to=origin/<branch> 1907
+
+git branch --set-upstream-to=origin/1907 1907
+
+
+
+
+
+拉取其它分支
+从远程仓库里拉取一条本地不存在的分支时：
+
+git checkout -b 本地分支名 origin/远程分支名
+
+这个将会自动创建一个新的本地分支，并与指定的远程分支关联起来。
+
+git checkout -b 21.02 origin/21.02
+git checkout -b master origin/master
+
+
+#切换分支
+git switch 1907
+
+Already on '1907'
+Your branch is behind 'origin/1907' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+
+
+#创建新分支并切换
+git switch -c 1907
+
+
+3）版本(tag)操作相关命令
+查看版本：$ git tag
+创建版本：$ git tag [name]
+删除版本：$ git tag -d [name]
+查看远程版本：$ git tag -r
+创建远程版本(本地版本push到远程)：$ git push origin [name]
+删除远程版本：$ git push origin :refs/tags/[name]
+
+
+
+
