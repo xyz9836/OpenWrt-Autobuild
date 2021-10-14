@@ -48,6 +48,13 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-19.07/package
 rm -rf package/system/zram-swap
 svn co https://github.com/openwrt/openwrt/tree/main/package/system/zram-swap package/system/zram-swap
 
+#https://github.com/kenzok8/small
+#不定期同步大神库更新，适合一键下载到package目录下，用于openwrt编译
+cd ./package/new
+git clone https://github.com/kenzok8/small.git
+cd ..
+cd ..
+
 # default settings and translate
 cp -rf ../default-settings package/new/lean-translate
 
