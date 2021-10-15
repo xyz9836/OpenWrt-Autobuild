@@ -52,10 +52,11 @@ svn co https://github.com/openwrt/openwrt/truk/package/system/zram-swap package/
 
 #https://github.com/kenzok8/small
 #不定期同步大神库更新，适合一键下载到package目录下，用于openwrt编译
-cd ./package/new
-git clone https://github.com/kenzok8/small.git
-cd ..
-cd ..
+#cd ./package/new
+#git clone https://github.com/kenzok8/small.git
+git clone -b master --depth 1 --single-branch https://github.com/kenzok8/small package/new
+#cd ..
+#cd ..
 
 
 # default settings and translate
